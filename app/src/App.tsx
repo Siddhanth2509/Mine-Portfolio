@@ -6,8 +6,11 @@ import Hero from './sections/Hero';
 import About from './sections/About';
 import Experience from './sections/Experience';
 import Projects from './sections/Projects';
+import PushpakClub from './sections/PushpakClub';
 import Skills from './sections/Skills';
+import Certifications from './sections/Certifications';
 import Achievements from './sections/Achievements';
+import Gallery from './sections/Gallery';
 import CTA from './sections/CTA';
 import Footer from './sections/Footer';
 import FloatingParticles from './components/FloatingParticles';
@@ -43,8 +46,11 @@ function App() {
         <About />
         <Experience />
         <Projects />
+        <PushpakClub />
         <Skills />
+        <Certifications />
         <Achievements />
+        <Gallery />
         <CTA />
       </main>
       

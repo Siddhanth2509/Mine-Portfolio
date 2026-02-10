@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react';
+import { ArrowRight, Github, Linkedin, Mail, Globe } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -292,6 +292,7 @@ const Hero = () => {
             {/* Social Links */}
             <div ref={socialsRef} className="flex gap-4 pt-6">
               {[
+                { icon: Globe, href: 'https://siddhanthsharma.vercel.app/', label: 'Portfolio' },
                 { icon: Github, href: 'https://github.com/Siddhanth2509', label: 'GitHub' },
                 { icon: Linkedin, href: 'https://www.linkedin.com/in/siddhanth-sharma2509', label: 'LinkedIn' },
                 { icon: Mail, href: 'mailto:siddhanth2325@gmail.com', label: 'Email' },

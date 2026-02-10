@@ -120,13 +120,14 @@ const Footer = () => {
     { name: 'Home', href: '#home' },
     { name: 'About', href: '#about' },
     { name: 'Projects', href: '#projects' },
+    { name: 'Pushpak', href: '#pushpak' },
     { name: 'Skills', href: '#skills' },
     { name: 'Achievements', href: '#achievements' },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
-    { icon: Github, href: 'https://github.com', label: 'GitHub' },
+    { icon: Linkedin, href: 'https://www.linkedin.com/in/siddhanth-sharma2509', label: 'LinkedIn' },
+    { icon: Github, href: 'https://github.com/Siddhanth2509', label: 'GitHub' },
     { icon: Mail, href: 'mailto:siddhanth2325@gmail.com', label: 'Email' },
   ];
 

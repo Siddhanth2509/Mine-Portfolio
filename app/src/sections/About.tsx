@@ -142,7 +142,7 @@ const About = () => {
   }, []);
 
   const stats = [
-    { icon: Briefcase, value: 2, suffix: '+', label: 'Years Experience' },
+    { icon: Briefcase, value: 3, suffix: '', label: 'Months Experience' },
     { icon: Code, value: 10, suffix: '+', label: 'Projects Completed' },
     { icon: Award, value: 15, suffix: '+', label: 'Technologies' },
   ];
@@ -172,9 +172,21 @@ const About = () => {
             className="relative group opacity-0"
           >
             <div className="relative overflow-hidden rounded-2xl border-3 border-[#c6f906] transform -rotate-3 transition-all duration-500 group-hover:rotate-0 group-hover:-translate-y-2">
-              {/* Placeholder for About Image */}
+              {/* Profile Image - Add your photo here */}
               <div className="aspect-[3/4] bg-gradient-to-br from-gray-900 to-black flex items-center justify-center">
-                <div className="text-center">
+                {/* Replace the src below with your actual image path (e.g., '/profile.jpg') */}
+                <img 
+                  src="/profile-photo.jpg" 
+                  alt="Siddhanth Sharma - AI/ML Engineer" 
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    // Fallback if image not found
+                    e.currentTarget.style.display = 'none';
+                    const fallback = e.currentTarget.nextElementSibling;
+                    if (fallback) (fallback as HTMLElement).style.display = 'flex';
+                  }}
+                />
+                <div className="text-center" style={{ display: 'none' }}>
                   <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-[#c6f90622] flex items-center justify-center border-2 border-[#c6f906]">
                     <span className="text-5xl font-display font-bold text-[#c6f906]">S</span>
                   </div>

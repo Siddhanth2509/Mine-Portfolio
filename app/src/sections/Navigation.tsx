@@ -9,9 +9,12 @@ const Navigation = () => {
   const navRef = useRef<HTMLElement>(null);
   const logoRef = useRef<HTMLDivElement>(null);
   const linksRef = useRef<HTMLDivElement>(null);
-  const ctaRef = useRef<HTMLButtonElement>(null);
+  const ctaRef = useRef<HTMLAnchorElement>(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // Replace with your Google Drive resume link
+  const RESUME_LINK = 'https://drive.google.com/file/d/1W5FTjEd30aqNWBJyZsBo8Z8vjgMRzAAH/view?usp=sharing';
 
   const navLinks = [
     { name: 'Home', href: '#home' },
@@ -125,13 +128,16 @@ const Navigation = () => {
           </div>
 
           {/* CTA Button */}
-          <button
+          <a
             ref={ctaRef}
+            href={RESUME_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 px-5 py-2.5 border border-[#c6f906] text-[#c6f906] rounded-full text-sm font-medium hover:bg-[#c6f906] hover:text-black transition-all duration-300 hover:shadow-[0_0_20px_rgba(198,249,6,0.4)]"
           >
             <Download className="w-4 h-4" />
             Resume
-          </button>
+          </a>
 
           {/* Mobile Menu Button */}
           <button
@@ -160,10 +166,15 @@ const Navigation = () => {
               {link.name}
             </a>
           ))}
-          <button className="flex items-center gap-2 px-5 py-2.5 border border-[#c6f906] text-[#c6f906] rounded-full text-sm font-medium w-full justify-center">
+          <a
+            href={RESUME_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-5 py-2.5 border border-[#c6f906] text-[#c6f906] rounded-full text-sm font-medium w-full justify-center"
+          >
             <Download className="w-4 h-4" />
             Resume
-          </button>
+          </a>
         </div>
       </div>
     </nav>

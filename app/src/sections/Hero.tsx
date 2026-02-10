@@ -292,8 +292,8 @@ const Hero = () => {
             {/* Social Links */}
             <div ref={socialsRef} className="flex gap-4 pt-6">
               {[
-                { icon: Github, href: 'https://github.com', label: 'GitHub' },
-                { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+                { icon: Github, href: 'https://github.com/Siddhanth2509', label: 'GitHub' },
+                { icon: Linkedin, href: 'https://www.linkedin.com/in/siddhanth-sharma2509', label: 'LinkedIn' },
                 { icon: Mail, href: 'mailto:siddhanth2325@gmail.com', label: 'Email' },
               ].map((social, i) => (
                 <a

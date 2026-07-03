@@ -248,10 +248,6 @@ const Experience = () => {
                 location: 'Ghaziabad, India',
                 period: '2022 - 2026',
                 score: 'CGPA: 8.30/10',
-                links: [
-                  { label: 'View Marksheet', href: '/Marksheet.pdf' },
-                  { label: 'View Provisional Degree', href: '/Provisional_Degree_Certificate.pdf' }
-                ]
               },
               {
                 degree: 'ISC (Class XII)',
@@ -288,21 +284,6 @@ const Experience = () => {
                   <span className="inline-block px-3 py-1 text-sm text-[#c6f906] border border-[#c6f90644] rounded-full mb-3">
                     {edu.score}
                   </span>
-                  {edu.links && (
-                    <div className="flex flex-wrap gap-2 mt-2">
-                      {edu.links.map((link, j) => (
-                        <a
-                          key={j}
-                          href={link.href}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="text-xs text-[#c6f906] px-3 py-1.5 bg-[#c6f90611] rounded-full border border-[#c6f90633] hover:bg-[#c6f906] hover:text-black transition-all duration-300"
-                        >
-                          {link.label}
-                        </a>
-                      ))}
-                    </div>
-                  )}
                 </div>
               </div>
             ))}

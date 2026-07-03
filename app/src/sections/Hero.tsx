@@ -281,6 +281,14 @@ const Hero = () => {
                 View My Projects
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-2 transition-transform duration-300" />
               </button>
+              <a
+                href="/Siddhanth_Sharma_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cta-btn flex items-center gap-3 px-8 py-4 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-black transition-all duration-300 hover:scale-105"
+              >
+                Download Resume
+              </a>
               <button
                 onClick={scrollToContact}
                 className="cta-btn flex items-center gap-3 px-8 py-4 border-2 border-[#c6f906] text-[#c6f906] font-semibold rounded-full hover:bg-[#c6f906] hover:text-black transition-all duration-300 hover:scale-105"

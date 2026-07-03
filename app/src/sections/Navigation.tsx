@@ -13,8 +13,8 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Replace with your Google Drive resume link
-  const RESUME_LINK = 'https://drive.google.com/file/d/1W5FTjEd30aqNWBJyZsBo8Z8vjgMRzAAH/view?usp=sharing';
+  // Point to local resume in public folder
+  const RESUME_LINK = '/Siddhanth_Sharma_Resume.pdf';
 
   const navLinks = [
     { name: 'Home', href: '#home' },

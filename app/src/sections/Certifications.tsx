@@ -230,6 +230,17 @@ const Certifications = () => {
                   <BookOpen className="w-5 h-5 text-[#c6f906]" />
                   <span>4 Months Intensive Training</span>
                 </div>
+                <div className="pt-2">
+                  <a
+                    href="/Siddhanth_Sharma_Certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#c6f906] text-black font-semibold rounded-xl hover:shadow-[0_0_15px_rgba(198,249,6,0.3)] hover:scale-105 transition-all duration-300 text-sm"
+                  >
+                    <span>View SAP Certification</span>
+                    <Award className="w-4 h-4" />
+                  </a>
+                </div>
               </div>
 
               {/* Description */}

@@ -13,30 +13,30 @@ const Projects = () => {
 
   const projects = [
     {
-      title: 'Underground Water Level Predictor',
-      category: 'Machine Learning',
+      title: 'ClipInsight AI',
+      category: 'Generative AI & Multimodal',
       description:
-        'Time-series ML model for predicting groundwater levels using historical data and seasonal patterns. Engineered features like lag variables, rolling means, and seasonal indicators to capture groundwater trends.',
-      tech: ['Python', 'Scikit-learn', 'Pandas', 'Streamlit', 'Time-Series Analysis'],
-      links: { demo: '#', github: '#' },
+        'Multimodal video intelligence platform using FastAPI, OpenCV, Whisper, and Google Gemini to analyze short-form videos, reducing API query latency by 35% using asynchronous task queues. Integrated Retrieval-Augmented Generation (RAG) with Gemini Pro and Whisper API, achieving 92% precision in hook and topic detection.',
+      tech: ['FastAPI', 'OpenCV', 'Whisper AI', 'Google Gemini Pro', 'RAG', 'Asynchronous Queues'],
+      links: { github: 'https://github.com/Siddhanth2509', demo: '' },
       color: '#c6f906',
     },
     {
-      title: 'Eye Assist - Disease Detection',
-      category: 'Computer Vision',
+      title: 'LLM Guardrails Gateway',
+      category: 'AI Safety & Security',
       description:
-        'CNN-based medical image classification system for detecting eye diseases from retinal fundus images. Addressed class imbalance and focused on cross-dataset generalization to reduce overfitting.',
-      tech: ['TensorFlow', 'OpenCV', 'CNN', 'Transfer Learning', 'Medical Imaging'],
-      links: { github: '#' },
+        'Enterprise-grade safety gateway for LLMs, protecting against prompt injections (98% jailbreak detection rate) and masking PII with < 45ms overhead latency using optimized regex matching and classification. Implemented dynamic policy enforcement, toxicity filtering, and topic alignment rules.',
+      tech: ['FastAPI', 'Next.js', 'Prisma ORM', 'SQLite', 'Regex Engines', 'Framer Motion'],
+      links: { github: 'https://github.com/Siddhanth2509', demo: '' },
       color: '#06f9c6',
     },
     {
-      title: 'EEG Brainwave Analysis',
-      category: 'Signal Processing',
+      title: 'Eye Assist - Retinal Detection',
+      category: 'Deep Learning & CV',
       description:
-        'Real-time emotional and cognitive state prediction from EEG signals using machine learning. Integrated trained ML models with a GUI-based system for real-time prediction and visualization.',
-      tech: ['Python', 'Signal Processing', 'ML', 'GUI Development', 'Healthcare AI'],
-      links: { demo: '#' },
+        'Medical AI system for retinal disease detection using CNNs (ResNet50 / MobileNetV2) and Transfer Learning, achieving 94.2% classification accuracy. Designed preprocessing, data augmentation, and class imbalance handling pipelines, and integrated Grad-CAM for Explainable AI (XAI) clinical support.',
+      tech: ['TensorFlow', 'PyTorch', 'CNN', 'Transfer Learning', 'Grad-CAM', 'Medical Imaging'],
+      links: { github: 'https://github.com/Siddhanth2509', demo: '' },
       color: '#f906c6',
     },
   ];

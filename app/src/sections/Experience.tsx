@@ -94,16 +94,32 @@ const Experience = () => {
 
   const experiences = [
     {
-      role: 'AI/ML Intern',
+      role: 'AI / Machine Learning Intern',
       company: 'Qmansys Infosolutions LLP',
       location: 'New Delhi, India',
-      duration: 'July 2025 - October 2025',
+      duration: 'Jul 2025 - Oct 2025',
       type: 'Hybrid',
-      description:
-        'Worked on an AI-based EEG brainwave analysis project focused on predicting patients\' emotional and cognitive states from brainwave signals. Conducted literature survey, data preprocessing, feature extraction, and ML model integration with GUI-based systems.',
-      skills: ['Python', 'Machine Learning', 'EEG Analysis', 'Signal Processing'],
-      link: '#',
+      description: [
+        'Developed an AI-powered EEG Brainwave Analysis System using Machine Learning to predict emotional and cognitive states, boosting classification accuracy by 14% (achieving 92% overall accuracy) using custom SVM and Random Forest models.',
+        'Engineered end-to-end EEG preprocessing (bandpass filtering, artifact removal), feature extraction (Power Spectral Density), and optimized model pipelines, reducing inference latency by 24% for real-time applications.',
+        'Integrated trained ML models into a deployment-ready GUI using Streamlit and FastAPI, enabling real-time visualization of brainwave patterns.'
+      ],
+      skills: ['Python', 'Machine Learning', 'EEG Analysis', 'FastAPI', 'Streamlit'],
+      link: '/Qmansys_Internship_Certificate.pdf',
     },
+    {
+      role: 'AI & Machine Learning Industry Training',
+      company: 'NASSCOM FutureSkills Prime',
+      location: 'India',
+      duration: '2024 - 2025',
+      type: '1 Year Training',
+      description: [
+        'Completed a comprehensive 1-year industry-aligned training curriculum specializing in Artificial Intelligence, Machine Learning, Deep Learning, Computer Vision, and Natural Language Processing (NLP).',
+        'Built and deployed 6+ practical, hands-on AI projects using Python, TensorFlow, PyTorch, Scikit-learn, OpenCV, and Git to apply models to real-world datasets.'
+      ],
+      skills: ['Python', 'TensorFlow', 'PyTorch', 'Computer Vision', 'NLP', 'Git'],
+      link: '',
+    }
   ];
 
   return (
@@ -151,12 +167,17 @@ const Experience = () => {
                         </h3>
                         <div className="flex items-center gap-2 mt-2">
                           <span className="text-lg text-gray-400">{exp.company}</span>
-                          <a
-                            href={exp.link}
-                            className="text-[#c6f906] hover:scale-110 transition-transform duration-300"
-                          >
-                            <ExternalLink className="w-4 h-4" />
-                          </a>
+                          {exp.link && (
+                            <a
+                              href={exp.link}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-[#c6f906] hover:scale-110 transition-all duration-300 flex items-center gap-1.5 text-xs bg-[#c6f90615] px-3 py-1 rounded-full border border-[#c6f90633]"
+                            >
+                              <span>View Certificate</span>
+                              <ExternalLink className="w-3.5 h-3.5" />
+                            </a>
+                          )}
                         </div>
                       </div>
                       <span className="px-3 py-1 text-xs font-medium text-[#c6f906] border border-[#c6f90644] rounded-full">
@@ -177,7 +198,15 @@ const Experience = () => {
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-400 leading-relaxed mb-6">{exp.description}</p>
+                    {Array.isArray(exp.description) ? (
+                      <ul className="text-gray-400 leading-relaxed mb-6 list-disc pl-5 space-y-2">
+                        {exp.description.map((bullet, idx) => (
+                          <li key={idx}>{bullet}</li>
+                        ))}
+                      </ul>
+                    ) : (
+                      <p className="text-gray-400 leading-relaxed mb-6">{exp.description}</p>
+                    )}
 
                     {/* Skills */}
                     <div className="flex flex-wrap gap-2">
@@ -211,40 +240,70 @@ const Experience = () => {
             <span className="text-[#c6f906]">EDUCATION</span> BACKGROUND
           </h3>
 
-          <div className="grid md:grid-cols-2 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             {[
               {
                 degree: 'B.Tech in CSE-AIML',
                 school: 'Raj Kumar Goel Institute of Technology',
                 location: 'Ghaziabad, India',
                 period: '2022 - 2026',
-                score: 'CGPA: 8.22/10',
+                score: 'CGPA: 8.30/10',
+                links: [
+                  { label: 'View Marksheet', href: '/Marksheet.pdf' },
+                  { label: 'View Provisional Degree', href: '/Provisional_Degree_Certificate.pdf' }
+                ]
               },
               {
                 degree: 'ISC (Class XII)',
                 school: 'St. Conrad\'s Inter College',
                 location: 'Agra, India',
+                period: '2021 - 2022',
+                score: 'Score: 80%',
+              },
+              {
+                degree: 'ICSE (Class X)',
+                school: 'St. Conrad\'s Inter College',
+                location: 'Agra, India',
                 period: '2019 - 2020',
-                score: 'Percentage: 80%',
+                score: 'Score: 80.1%',
               },
             ].map((edu, i) => (
               <div
                 key={i}
-                className="group p-6 rounded-xl border border-[#222] bg-[#0a0a0a] hover:border-[#c6f90644] transition-all duration-300"
+                className="group p-6 rounded-xl border border-[#222] bg-[#0a0a0a] hover:border-[#c6f90644] transition-all duration-300 flex flex-col justify-between"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <h4 className="text-xl font-display font-semibold text-white group-hover:text-[#c6f906] transition-colors duration-300">
-                    {edu.degree}
-                  </h4>
-                  <span className="text-xs text-gray-500 px-2 py-1 bg-[#222] rounded">
-                    {edu.period}
-                  </span>
+                <div>
+                  <div className="flex items-start justify-between mb-4">
+                    <h4 className="text-xl font-display font-semibold text-white group-hover:text-[#c6f906] transition-colors duration-300">
+                      {edu.degree}
+                    </h4>
+                    <span className="text-xs text-gray-500 px-2 py-1 bg-[#222] rounded flex-shrink-0 ml-2">
+                      {edu.period}
+                    </span>
+                  </div>
+                  <p className="text-gray-400 mb-2">{edu.school}</p>
+                  <p className="text-sm text-gray-500 mb-3">{edu.location}</p>
                 </div>
-                <p className="text-gray-400 mb-2">{edu.school}</p>
-                <p className="text-sm text-gray-500 mb-3">{edu.location}</p>
-                <span className="inline-block px-3 py-1 text-sm text-[#c6f906] border border-[#c6f90644] rounded-full">
-                  {edu.score}
-                </span>
+                <div className="mt-4">
+                  <span className="inline-block px-3 py-1 text-sm text-[#c6f906] border border-[#c6f90644] rounded-full mb-3">
+                    {edu.score}
+                  </span>
+                  {edu.links && (
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {edu.links.map((link, j) => (
+                        <a
+                          key={j}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-xs text-[#c6f906] px-3 py-1.5 bg-[#c6f90611] rounded-full border border-[#c6f90633] hover:bg-[#c6f906] hover:text-black transition-all duration-300"
+                        >
+                          {link.label}
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             ))}
           </div>

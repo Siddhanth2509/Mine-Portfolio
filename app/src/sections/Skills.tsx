@@ -11,35 +11,49 @@ const Skills = () => {
   const [activeCategory, setActiveCategory] = useState('all');
 
   const categories = [
-    { id: 'all', label: 'All Skills' },
-    { id: 'programming', label: 'Programming' },
-    { id: 'frameworks', label: 'Frameworks' },
-    { id: 'tools', label: 'Tools' },
-    { id: 'cloud', label: 'Cloud/DB' },
+    { id: 'all', label: 'All' },
+    { id: 'programming', label: 'Languages' },
+    { id: 'frameworks', label: 'AI/ML/CV' },
+    { id: 'generative', label: 'Generative AI' },
+    { id: 'backend', label: 'Backend/APIs' },
+    { id: 'tools', label: 'Tools & DevOps' },
   ];
 
   const skills = [
-    // Programming
-    { name: 'Python', category: 'programming', level: 90 },
+    // Programming Languages
+    { name: 'Python', category: 'programming', level: 92 },
+    { name: 'SQL', category: 'programming', level: 82 },
+    { name: 'Java', category: 'programming', level: 72 },
     { name: 'C', category: 'programming', level: 75 },
-    { name: 'Java', category: 'programming', level: 70 },
-    { name: 'SQL', category: 'programming', level: 80 },
-    // Frameworks
-    { name: 'Scikit-learn', category: 'frameworks', level: 85 },
-    { name: 'TensorFlow', category: 'frameworks', level: 80 },
-    { name: 'PyTorch', category: 'frameworks', level: 75 },
-    { name: 'Pandas', category: 'frameworks', level: 90 },
-    { name: 'NumPy', category: 'frameworks', level: 88 },
-    { name: 'OpenCV', category: 'frameworks', level: 78 },
-    // Tools
-    { name: 'Git', category: 'tools', level: 85 },
-    { name: 'GitHub', category: 'tools', level: 88 },
-    { name: 'Kaggle', category: 'tools', level: 80 },
-    { name: 'Jupyter', category: 'tools', level: 90 },
-    { name: 'Streamlit', category: 'tools', level: 82 },
-    // Cloud/DB
-    { name: 'MySQL', category: 'cloud', level: 80 },
-    { name: 'Streamlit Cloud', category: 'cloud', level: 75 },
+    // AI/ML/CV
+    { name: 'PyTorch', category: 'frameworks', level: 85 },
+    { name: 'TensorFlow', category: 'frameworks', level: 88 },
+    { name: 'Scikit-learn', category: 'frameworks', level: 90 },
+    { name: 'OpenCV', category: 'frameworks', level: 80 },
+    { name: 'Deep Learning', category: 'frameworks', level: 88 },
+    { name: 'Computer Vision', category: 'frameworks', level: 85 },
+    { name: 'CNNs', category: 'frameworks', level: 88 },
+    { name: 'Transfer Learning', category: 'frameworks', level: 85 },
+    // Generative AI
+    { name: 'LLMs', category: 'generative', level: 90 },
+    { name: 'RAG', category: 'generative', level: 92 },
+    { name: 'Prompt Engineering', category: 'generative', level: 95 },
+    { name: 'Google Gemini Pro', category: 'generative', level: 90 },
+    { name: 'Whisper AI', category: 'generative', level: 85 },
+    { name: 'Vector Search', category: 'generative', level: 88 },
+    { name: 'ChromaDB', category: 'generative', level: 86 },
+    // Backend/APIs
+    { name: 'FastAPI', category: 'backend', level: 90 },
+    { name: 'REST APIs', category: 'backend', level: 88 },
+    { name: 'Streamlit', category: 'backend', level: 85 },
+    // Tools & DevOps
+    { name: 'Git & GitHub', category: 'tools', level: 90 },
+    { name: 'Docker', category: 'tools', level: 82 },
+    { name: 'Vercel & Render', category: 'tools', level: 85 },
+    { name: 'Railway', category: 'tools', level: 80 },
+    { name: 'Prisma ORM', category: 'tools', level: 82 },
+    { name: 'SQLite', category: 'tools', level: 85 },
+    { name: 'VS Code & Jupyter', category: 'tools', level: 92 },
   ];
 
   const filteredSkills = activeCategory === 'all' 

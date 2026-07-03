@@ -19,10 +19,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   useEffect(() => {
-    // Initialize smooth scroll behavior
+    // Optimize ScrollTrigger configuration
+    ScrollTrigger.config({
+      autoRefreshEvents: "visibilitychange,DOMContentLoaded,load,resize"
+    });
+
     ScrollTrigger.defaults({
       toggleActions: 'play none none reverse',
     });
+
+    // Normalize touch scroll for mobile smoothness
+    if (ScrollTrigger.isTouch) {
+      ScrollTrigger.normalizeScroll(true);
+    }
 
     // Refresh ScrollTrigger on load
     ScrollTrigger.refresh();

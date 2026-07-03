@@ -117,27 +117,33 @@ const Hero = () => {
       );
     }
 
-    // Scroll-triggered parallax
-    ScrollTrigger.create({
-      trigger: section,
-      start: 'top top',
-      end: 'bottom top',
-      scrub: true,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        if (orbitRef.current) {
-          gsap.set(orbitRef.current, {
-            y: progress * 40,
-            rotate: progress * 45,
-          });
-        }
-        if (nameRef.current) {
-          gsap.set(nameRef.current, {
-            y: progress * -30,
-          });
-        }
-      },
-    });
+    // Scroll-triggered parallax with smooth scrub (prevent stuttering)
+    if (orbitRef.current) {
+      gsap.to(orbitRef.current, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+        },
+        y: 40,
+        rotate: 45,
+        ease: 'none',
+      });
+    }
+
+    if (nameRef.current) {
+      gsap.to(nameRef.current, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+        },
+        y: -30,
+        ease: 'none',
+      });
+    }
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => {

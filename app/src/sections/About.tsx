@@ -51,22 +51,18 @@ const About = () => {
       });
       triggers.push(imgTrigger);
 
-      // Parallax effect
-      const parallaxTrigger = ScrollTrigger.create({
-        trigger: section,
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: true,
-        onUpdate: (self) => {
-          if (imageRef.current) {
-            gsap.set(imageRef.current, {
-              y: (self.progress - 0.5) * 100,
-              rotate: -3 + self.progress * 6,
-            });
-          }
+      // Parallax effect with smooth scrub (prevent stuttering)
+      gsap.to(imageRef.current, {
+        scrollTrigger: {
+          trigger: section,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: 1,
         },
+        y: 50,
+        rotate: 3,
+        ease: 'none',
       });
-      triggers.push(parallaxTrigger);
     }
 
     // Content paragraphs
@@ -215,7 +211,7 @@ const About = () => {
             </p>
             
             <p className="about-text text-base md:text-lg text-gray-400 leading-relaxed opacity-0">
-              Currently pursuing my <span className="text-white">B.Tech in CSE-AIML</span> at Raj Kumar Goel 
+              Completed my <span className="text-white">B.Tech in CSE-AIML</span> at Raj Kumar Goel 
               Institute of Technology with a CGPA of <span className="text-[#c6f906]">8.30/10</span>, I&apos;ve worked 
               on projects ranging from EEG brainwave analysis to computer vision applications.
             </p>
